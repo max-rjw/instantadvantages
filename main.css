@@ -72,6 +72,10 @@ transition: 0.3s ease;
 { content: none; 
 } 
 
+#header
+{ min-height: 140px; 
+}
+
 .trifecta img 
 { visibility: hidden; width: 20%; height: auto; 
 } 
