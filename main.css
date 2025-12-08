@@ -217,6 +217,18 @@ transition: 0.3s ease;
     font-size: 17px;
   }
 
+  .intro-text {
+    font-size: 18px;
+    top: 0px; /* moves the text down into the top of the image */
+  }
+
+  .intro-image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
 }
 
 .hide {
