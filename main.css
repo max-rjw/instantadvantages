@@ -97,7 +97,7 @@ transition: 0.3s ease;
 .intro-image-wrapper {
   position: relative;
   width: 100%;
-  margin-top: -80px; /* pulls the image up so the text overlaps cleanly */
+  margin-top: -110px; /* pulls the image up so the text overlaps cleanly */
 }
 
 .intro-image {
@@ -114,6 +114,17 @@ transition: 0.3s ease;
   height: 40%; /* how much fade you want */
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
   pointer-events: none;
+}
+
+.image-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* adjust how strong/high the fade is */
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, #000 100%);
+  pointer-events: none;
+  z-index: 3;
 }
 
 #nav_bar {
