@@ -219,7 +219,7 @@ transition: 0.3s ease;
 
   .intro-text {
     font-size: 18px;
-    top: 0px; /* moves the text down into the top of the image */
+    top: 25px; /* moves the text down into the top of the image */
   }
 
   .intro-image-wrapper {
