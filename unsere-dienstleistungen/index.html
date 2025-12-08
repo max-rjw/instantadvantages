@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Unsere Dienstleistungen - Instant Advantages</title>
     <link rel="icon" type="/image/jpg" href="/html/images/logo/logo white.png" />
-    <link rel="stylesheet" href="/html/main.css" />
+    <link rel="stylesheet" href="../main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,27 +18,35 @@
   <body>
 
 
-    <!--Header Starts Here (Logo + Nav Bar)*/-->
-    <header>
+    <div id ="header"></div>
 
-      <div class="logo">
-        <a href="https://www.instantadvantages.com"> <img src="/html/images/logo/logo black.png" alt="Instant Advantages">  </a>
-      </div>
+    <script>fetch("/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
 
-      <div class="menu-toggle">
-        <img src="/html/images/svg's/bars.svg" alt="menu icon" id="menu-toggle">
-      </div>
+      // --- add your burger menu script here ---
+      const menuToggle = document.querySelector('.menu-toggle');
+    const navBar = document.getElementById('nav_bar');
 
+    menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent bubbling
+   navBar.classList.toggle('show');
+    menuToggle.classList.toggle('hide'); // hide hamburger when menu is open
+    });
 
-      <nav class="nav_bar" id="nav_bar">
-        <a href="ueber_uns.html">Über Uns</a>
-        <a href="https://www.instantadvantages.com">Unsere Dienstleistungen</a>
-        <a href="https://www.instagram.com/instantadvantages/" target="_blank"> <img src="/html/images/insta/insta dark.jpeg" alt="Instagram"> </a>
-        <a href="https://www.instantadvantages.com" class="kontakt">  Kontakt</a>
-      </nav>
+    // close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const isClickInsideNav = navBar.contains(e.target);
+      const isClickOnToggle = menuToggle.contains(e.target);
 
-    </header>
-    <!--header ends Here logo + nav bar)*/-->
+      if (navBar.classList.contains('show') && !isClickInsideNav && !isClickOnToggle) {
+        navBar.classList.remove('show');
+        menuToggle.classList.remove('hide'); // show hamburger again
+      }
+    });
+      // --- end of burger menu script ---
+    });</script>
 
     <div class="intro">
 

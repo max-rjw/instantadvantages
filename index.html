@@ -17,28 +17,37 @@
   <!--Body Starts Here*/-->
   <body>
 
+    <div id ="header"></div>
 
-    <!--Header Starts Here (Logo + Nav Bar)*/-->
-    <header>
+    <script>fetch("/header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
 
-      <div class="logo">
-        <a href="https://www.instantadvantages.com"> <img src="images/logo/logo black.png" alt="Instant Advantages">  </a>
-      </div>
+      // --- add your burger menu script here ---
+      const menuToggle = document.querySelector('.menu-toggle');
+    const navBar = document.getElementById('nav_bar');
 
-      <div class="menu-toggle">
-        <img src="images/svg's/bars.svg" alt="menu icon" id="menu-toggle">
-      </div>
+    menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent bubbling
+   navBar.classList.toggle('show');
+    menuToggle.classList.toggle('hide'); // hide hamburger when menu is open
+    });
 
+    // close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const isClickInsideNav = navBar.contains(e.target);
+      const isClickOnToggle = menuToggle.contains(e.target);
 
-      <nav class="nav_bar" id="nav_bar">
-        <a href="https://www.instantadvantages.com">Über Uns</a>
-        <a href="/unsere-dienstleistungen/">Unsere Dienstleistungen</a>
-        <a href="https://www.instagram.com/instantadvantages/" target="_blank"> <img src="images/insta/insta dark.jpeg" alt="Instagram"> </a>
-        <a href="https://www.instantadvantages.com" class="kontakt">  Kontakt</a>
-      </nav>
+      if (navBar.classList.contains('show') && !isClickInsideNav && !isClickOnToggle) {
+        navBar.classList.remove('show');
+        menuToggle.classList.remove('hide'); // show hamburger again
+      }
+    });
+      // --- end of burger menu script ---
+    });</script>
 
-    </header>
-    <!--header ends Here logo + nav bar)*/-->
+    
 
     <div class="intro">
 
