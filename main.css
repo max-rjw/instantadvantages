@@ -96,6 +96,24 @@ transition: 0.3s ease;
   z-index: 5;
 }
 
+.certi
+  {
+    position: absolute;
+    bottom: 20px;
+    right: 19px;
+    z-index: 20;
+    display: flex;
+    justify-content: end;
+  }
+
+  .certi img
+  {
+    width: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
 .intro-image-wrapper {
   position: relative;
   width: 100%;
@@ -228,16 +246,16 @@ transition: 0.3s ease;
 
   .certi
   {
-    display: flex;
-    justify-content: start;
+    position: absolute;
+    justify-content: end;
+    top: 302px;
   }
 
   .certi img
   {
-    width: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    width: 50px;
+    margin-left: 0px;
+    margin-right: 11px;
   }
 
   .intro-image-wrapper {
