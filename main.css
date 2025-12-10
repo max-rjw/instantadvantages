@@ -93,7 +93,7 @@ transition: 0.3s ease;
   /* overlap the image */
   position: relative;
   top: 30px; /* moves the text down into the top of the image */
-  z-index: 5;
+  z-index: 20;
 }
 
 .certi
@@ -168,6 +168,7 @@ transition: 0.3s ease;
   filter: invert(1);
 }
 
+
 /*Iphone/small screens*/
 @media (max-width: 869px) 
 { 
@@ -182,7 +183,7 @@ transition: 0.3s ease;
     position: absolute; 
     top: 15px;           
     right: 20px;        
-    z-index: 1001;       
+    z-index: 11;       
     cursor: pointer;
     transition: all 0.2s ease;
   } 
@@ -194,10 +195,11 @@ transition: 0.3s ease;
     top: 30px;
     right: 20px;
     background-color: black;
-    padding: 10px 5px 10px 0px;
+    padding: top 9px;
     border-radius: 10px;
-    gap: 15px;
-    z-index: 1000;
+    gap: 10px;
+    padding-top: 10px;
+    z-index: 10;
     margin: 0;
     width: fit-content;
     transition: all 0.2s ease;
