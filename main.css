@@ -118,7 +118,7 @@ transition: 0.3s ease;
 .certi
   {
     position: fixed;
-    top: 720px;
+    top: 87vh;
     right: 30px;
     z-index: 20;
     display: flex;
