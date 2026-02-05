@@ -76,31 +76,50 @@ transition: 0.3s ease;
   display: block;
 }
 
-.intro {
+/* ========== HERO SECTION ========== */
+
+.hero {
+  position: relative;
   color: white;
-  margin-top: 50px; 
-  margin-left: 40px;
-  margin-bottom: 60px; /* space before the image starts */
+}
+
+.hero-content {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  padding-right: 240px;
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-size: 38px;
+  font-weight: 650;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.kicker {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.hero-image {
+  padding-top: 110px;
   position: relative;
 }
 
-
-
-.intro-text {
-  font-size: 24px;
-  margin-top: 10px;
-
-  /* overlap the image */
-  position: relative;
-  top: 30px; /* moves the text down into the top of the image */
-  z-index: 20;
+.hero-image img {
+  width: 100%;
+  display: block;
 }
 
 .certi
   {
     position: absolute;
-    top: 220px;
-    right: 36px;
+    top: 590px;
+    right: 40px;
     z-index: 20;
     display: flex;
     justify-content: end;
@@ -108,22 +127,11 @@ transition: 0.3s ease;
 
   .certi img
   {
-    width: 100px;
+    width: 80px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
   }
-
-.intro-image-wrapper {
-  position: relative;
-  width: 100%;
-  margin-top: -110px; /* pulls the image up so the text overlaps cleanly */
-}
-
-.intro-image {
-  width: 100%;
-  display: block;
-}
 
 /* Fade to black */
 .image-fade {
@@ -232,20 +240,6 @@ transition: 0.3s ease;
     padding: 4px 8px 4px 10px; 
   } 
   
-  .intro 
-  { 
-    margin-top: 30px; 
-    margin-left: 20px; 
-    margin-right: 20px;
-    font-size: 17px;
-  }
-
-
-  .intro-text {
-    font-size: 18px;
-    top: 25px; /* moves the text down into the top of the image */
-  }
-
   .certi
   {
     position: absolute;
@@ -260,12 +254,6 @@ transition: 0.3s ease;
     margin-right: 11px;
   }
 
-  .intro-image-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
 
 }
 
