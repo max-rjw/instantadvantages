@@ -16,7 +16,7 @@ header
 { 
   display: flex; 
   justify-content: space-between; 
-  align-items: flex-start; 
+  align-items: center; 
 } 
 
 .logo img 
@@ -26,6 +26,9 @@ header
   margin-top: 40px; 
   flex: 0 0 auto; } 
 
+.nav_bar{
+  align-items: center;
+}
 
 .nav_bar a 
 { color: #ffffff; 
@@ -272,7 +275,7 @@ transition: 0.3s ease;
   }
 
   .image-fade-top {
-    height: 60%;
+    height: 100%;
   }
 
   .certi
