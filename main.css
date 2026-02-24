@@ -240,9 +240,28 @@ transition: 0.3s ease;
     padding: 4px 8px 4px 10px; 
   } 
   
+  .hero-content {
+    position: relative;   /* stop absolute positioning on mobile */
+    top: auto;
+    left: auto;
+    padding: 0px 20px;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .kicker {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  } 
   .certi
   {
-    position: absolute;
+    position: static;
     justify-content: end;
     top: 301px;
   }
